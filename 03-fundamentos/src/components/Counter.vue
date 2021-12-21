@@ -1,8 +1,8 @@
 <template>
-  <h2>{{ customTitle() }} {{ start }}</h2>
+  <h2>{{ customTitle }}</h2>
   <p>{{ counter }} <sup>2</sup> = {{ getSquareCounter }}</p>
 
-  <div>
+  <div class="buttons-container">
     <button @click="increase">+1</button>
     <button @click="decrease">-1</button>
   </div>
@@ -36,13 +36,13 @@ export default {
     decrease() {
       this.counter--;
     },
-    customTitle() {
-      return this.title ? this.title : "Counter";
-    },
   },
   computed: {
     getSquareCounter() {
       return this.counter * this.counter;
+    },
+    customTitle() {
+      return this.title || "Counter";
     },
   },
 };
