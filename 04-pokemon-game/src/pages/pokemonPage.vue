@@ -99,6 +99,10 @@ export default {
 .container-score {
   margin-left: 15%;
   width: 10%;
-  border: 2px solid green;
+  border: 3px solid green;
+}
+
+.container-score hr {
+  border: 1px solid green;
 }
 </style>
